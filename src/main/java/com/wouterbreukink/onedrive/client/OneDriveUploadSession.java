@@ -34,4 +34,18 @@ public class OneDriveUploadSession extends OneDriveUploadSessionBase {
 	public long getRemoteFileLength() {
 		return file.length();
 	}
+	
+	@Override
+    public void setComplete(OneDriveItem item) 
+    {
+    	super.setComplete(item);
+        
+    	try {
+			raf.close();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+    }
+	
 }
