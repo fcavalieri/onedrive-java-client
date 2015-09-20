@@ -1,0 +1,12 @@
+machine:
+  java:
+    version: openjdk8
+  environment:
+    SOURCE_DIR: /home/ubuntu/onedrive-java-client
+    TESTS_DIR: /home/ubuntu/onedrive-java-client/tests
+dependencies:
+  override:
+    - cd "${SOURCE_DIR}" && mvn package
+test:
+  override:
+    - mvn test
