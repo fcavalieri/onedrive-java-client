@@ -7,7 +7,8 @@ machine:
 dependencies:
   override:
     - cd "${SOURCE_DIR}" && mvn compile
-    - echo -e "${ONEDRIVE_KEY}" > /home/ubuntu/onedrive.key
+    - mkdir /home/ubuntu/.onedrive-java-client
+    - echo -e "${ONEDRIVE_KEY}" > /home/ubuntu/.onedrive-java-client/onedrive.key
 test:
   override:
     - mvn test
