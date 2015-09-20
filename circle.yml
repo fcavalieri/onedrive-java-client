@@ -1,6 +1,6 @@
 machine:
   java:
-    version: openjdk8
+    version: oraclejdk8
   environment:
     SOURCE_DIR: /home/ubuntu/onedrive-java-client
     TESTS_DIR: /home/ubuntu/onedrive-java-client/tests
