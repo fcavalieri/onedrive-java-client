@@ -79,7 +79,7 @@
                         <manifest>
                             <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
                             <addDefaultSpecificationEntries>true</addDefaultSpecificationEntries>
-                            <mainClass>com.wouterbreukink.onedrive.Main</mainClass>
+                            <mainClass>com.wouterbreukink.onedrive.CLI</mainClass>
                         </manifest>
                     </archive>
                     <finalName>onedrive-java-client</finalName>

@@ -14,7 +14,7 @@ import java.util.Set;
 
 public class CommandLineOpts {
 
-    private static final Logger log = LogManager.getLogger(Main.class.getName());
+    private static final Logger log = LogManager.getLogger(CLI.class.getName());
 
     private static final Options optionsToParse = buildOptions();
     private static CommandLineOpts opts = new CommandLineOpts();

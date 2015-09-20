@@ -11,7 +11,7 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import com.wouterbreukink.onedrive.Main;
+import com.wouterbreukink.onedrive.CLI;
 
 public class OneDriveTest 
 {
@@ -60,7 +60,7 @@ public class OneDriveTest
 	          "--tries", "10"
 			};
 		
-		Main.main(parameters);
+		CLI.main(parameters);
 	}
 	
 	@AfterClass
@@ -86,7 +86,7 @@ public class OneDriveTest
           "--tries", "10"
 		};
 		
-		Main.main(parametersUp);
+		CLI.main(parametersUp);
 		
 		System.out.println("Downloading test data");
 		String[] parametersDown = 
@@ -101,7 +101,7 @@ public class OneDriveTest
 	          "--tries", "10"
 			};
 		
-		Main.main(parametersDown);
+		CLI.main(parametersDown);
 		
 		TestHelper.assertEqualsFolders(sourceFolder, downloadFolder);
 	}
@@ -124,7 +124,7 @@ public class OneDriveTest
           "--encryption-key", "password"
 		};
 		
-		Main.main(parametersUp);
+		CLI.main(parametersUp);
 		
 		System.out.println("Downloading test data (without decrypting)");
 		String[] parametersDown = 
@@ -139,7 +139,7 @@ public class OneDriveTest
 	          "--tries", "10"
 			};
 		
-		Main.main(parametersDown);
+		CLI.main(parametersDown);
 		
 		TestHelper.assertEncryptedFolder(downloadFolder);
 		
@@ -160,7 +160,7 @@ public class OneDriveTest
 	          "--encryption-key", "password"
 			};
 		
-		Main.main(parametersDownDec);
+		CLI.main(parametersDownDec);
 		
 		TestHelper.assertEqualsFolders(sourceFolder, downloadFolder);
 	}
