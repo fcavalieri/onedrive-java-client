@@ -6,7 +6,8 @@ machine:
     TESTS_DIR: /home/ubuntu/onedrive-java-client/tests
 dependencies:
   override:
-    - cd "${SOURCE_DIR}" && mvn package
+    - cd "${SOURCE_DIR}" && mvn compile
+    - echo -e "${ONEDRIVE_KEY}" > /home/ubuntu/onedrive.key
 test:
   override:
     - mvn test
