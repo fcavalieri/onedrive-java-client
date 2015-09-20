@@ -17,7 +17,7 @@ public class CommandLineOpts {
     private static final Logger log = LogManager.getLogger(Main.class.getName());
 
     private static final Options optionsToParse = buildOptions();
-    private static final CommandLineOpts opts = new CommandLineOpts();
+    private static CommandLineOpts opts = new CommandLineOpts();
     private boolean isInitialised;
 
     // Mandatory arguments
@@ -50,7 +50,8 @@ public class CommandLineOpts {
 
     public static void initialise(String[] args) throws ParseException {
 
-        CommandLineParser parser = new DefaultParser();
+    	opts = new CommandLineOpts();
+    	CommandLineParser parser = new DefaultParser();
         CommandLine line = parser.parse(optionsToParse, args);
 
         for (Option opt : line.getOptions()) {

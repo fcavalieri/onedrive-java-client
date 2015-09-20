@@ -1,0 +1,14 @@
+machine:
+  java:
+    version: oraclejdk8
+  environment:
+    SOURCE_DIR: /home/ubuntu/onedrive-java-client
+    TESTS_DIR: /home/ubuntu/onedrive-java-client/tests
+dependencies:
+  override:
+    - cd "${SOURCE_DIR}" && mvn compile
+    - mkdir /home/ubuntu/.onedrive-java-client
+    - echo -e "${ONEDRIVE_KEY}" > /home/ubuntu/.onedrive-java-client/onedrive.key
+test:
+  override:
+    - mvn test
